@@ -2,7 +2,7 @@
 
 # TestBase
 A base project for testing with pytest, when pushing or pulling to github, tests will run automatically
-on the github actions workflow. Test run for Python 3.9, 3.10, and 3.11 on Windows and Ubuntu environments.
+on the github actions workflow. Tests run for Python 3.9, 3.10, and 3.11 on Windows and Ubuntu environments.
 
 ---
 
@@ -11,21 +11,21 @@ on the github actions workflow. Test run for Python 3.9, 3.10, and 3.11 on Windo
 - "mypy src" to check for type errors
 - "flake8 src" to check for linting errors
 - "pytest" to run tests
-- "tox" to run tests for all environments and python versions
+- "tox" to run tests for all listed python versions
 
 ### pyproject.toml
 investigate this config  
-*addopts* infers package name from src, change to match
+*addopts* infers package name from ./src/, change to match
 
 ### setup.cfg
 investigate this config  
 *install_requires* infers requirements from requirements.txt  
-*packages* infers package name from src, change to match
+*packages* infers package name from ./src/, change to match
 *[options.package_data]* uses package name, change to match
 
 ### ./tests/
 test_*.py contains the tests themselves  
-/conftests.py contains fixtures for the tests *fixtures may be removed if not needed*  
+conftests.py contains fixtures for the tests *fixtures may be removed if not needed*  
 
 ---
 
